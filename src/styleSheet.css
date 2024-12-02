@@ -1,0 +1,80 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+label #city{
+    padding: 0.5rem 0.25rem;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    transition: 0.4s;
+    font-size: 1rem;
+    font-weight: bold;
+}
+label #city:focus{
+    outline: none;
+}
+label{
+    margin-bottom:1rem ;
+}
+.container{
+    background-color: #fff;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 15px;
+    box-shadow: 0px 7px 25px -10px ;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    animation-name: animate;
+    animation-duration: 0.4s;
+}
+.icon,p,h2{
+    animation-name: opacity;
+    animation-duration: 0.8s;
+}
+h2:first-child{
+    text-transform: uppercase;
+    height: 20%;
+    text-align: center;
+    line-height: 1.5rem;
+}
+.tempetur,.humidity,.weather{
+    height: 15%;
+}
+p{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.icon{
+    font-size: 4rem;
+}
+@keyframes animate {
+    from{
+        height: 0;
+    }
+    to{
+        height: 20rem;
+    }
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
